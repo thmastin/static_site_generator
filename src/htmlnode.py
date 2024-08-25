@@ -13,7 +13,7 @@ class HTMLNode:
         if self.props == None:
             raise Exception("No Properties")
         for key in self.props:
-            output = output + " " + key + " " + self.props[key]
+            output = output + f" {key} {self.props[key]}"
         return output
     
     def __repr__(self):
