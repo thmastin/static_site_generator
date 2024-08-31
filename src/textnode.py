@@ -11,7 +11,7 @@ class TextNode:
         return self.text == other.text and self.text_type == other.text_type and self.url == other.url
     
     def __repr__(self):
-        return "TextNode(" + self.text + ", " + self.text_type + ", " + self.url + ")"
+        return f"TextNode(text='{self.text}', text_type='{self.text_type}', url={self.url!r})"
 
 def text_node_to_html_node(text_node):
     output = ""
@@ -26,7 +26,6 @@ def text_node_to_html_node(text_node):
 
     if text_node.text_type in text_types:
         output = text_types[text_node.text_type]
-        print(text_node.text_type)
         return output
     else:
         raise Exception("Text type not found")
